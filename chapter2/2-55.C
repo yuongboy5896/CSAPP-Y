@@ -31,6 +31,6 @@ int is_little_endina()
 int main(int argc,char *argv[])
 {
     int  i = is_little_endina();
-    printf("%d",i);
+    printf("%d \n",i);
     return 0;
 }

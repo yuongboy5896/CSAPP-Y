@@ -21,7 +21,7 @@ void show_bytes(byte_pointer start, size_t len){
 
 int is_little_endina()
 {
-    int little = 1;
+    short little = 1;
     byte_pointer start =  (byte_pointer) &little;
     printf("%p\t0x%.2x\n",&start[0],start[0]);
     return start[0];
@@ -30,6 +30,7 @@ int is_little_endina()
 
 int main(int argc,char *argv[])
 {
-    is_little_endina();
+    int  i = is_little_endina();
+    printf("%d",i);
     return 0;
 }

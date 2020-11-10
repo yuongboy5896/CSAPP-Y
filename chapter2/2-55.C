@@ -22,7 +22,7 @@ void show_bytes(byte_pointer start, size_t len){
 int is_little_endina()
 {
     int little = 1;
-    byte_pointer start =  little;
+    byte_pointer start =  (byte_pointer) &little;
     printf("%p\t0x%.2x\n",&start[0],start[0]);
     return start[0];
 } 

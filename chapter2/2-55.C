@@ -25,7 +25,7 @@ int is_little_endina()
     byte_pointer start =  (byte_pointer) &little;
     printf("%p\t0x%.2x\n",&start[0],start[0]);
     printf("%p\t0x%.2x\n",&start[1],start[1]);
-    return start;
+    return start[0];
 } 
 
 

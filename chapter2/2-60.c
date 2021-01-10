@@ -18,7 +18,7 @@ unsigned replace_byte(unsigned int x, int i, unsigned char b){
 	printf("(0x00FFFFFF >> (i - 1) * 2 * 4) --->>> %x \n ", (0x00FFFFFF >> 32-8*(i+1)));
 	printf("0x0FFFFFFF -%x  -->>> %x \n ", (0x0FFFFFFF >> 32 - i * 2 * 4 - 1) - 0xF0000000 >> 32 - i * 2 * 4 - 1, 0x0f000000 >> 32 - i * 2 * 4 - 1);
 */
-	return (x | 0xff << i * 2 * 4) &( (0xFFFFFF00 << i * 2 * 4 | b << i * 2 * 4) |(0x00FFFFFF >> 32 - 8 * (i + 1)));
+	return (x | 0xff << i <<3) &( (0xFFFFFF00 << i <<3 | b << i <<3) |(0x00FFFFFF >> 32 -  (i + 1)<<3));
 }
 
 int main(int argc, char *argv[]){
